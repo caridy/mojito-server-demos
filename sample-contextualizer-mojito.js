@@ -32,11 +32,11 @@ app.use(mojito.contextualizer.all);
 
 // registering a fake `dispatch engine`.
 mojito.dispatcher('mojito', {
-    dispatch: function (name, options, runtime, callback) {
+    dispatch: function (name, options, page, callback) {
         callback(null, JSON.stringify({
             name: name,
             options: options,
-            runtime: runtime
+            page: page
         }));
     }
 });
